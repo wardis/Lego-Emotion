@@ -23,8 +23,8 @@ const legoFace = document.getElementById('lego-face');
 const loadingText = document.getElementById('loading');
 
 async function loadFaceApi() {
-  await faceapi.loadTinyFaceDetectorModel('/assets/models');
-  await faceapi.loadFaceExpressionModel('/assets/models');
+  await faceapi.loadTinyFaceDetectorModel('assets/models');
+  await faceapi.loadFaceExpressionModel('assets/models');
 
   const stream = await navigator.mediaDevices.getUserMedia({ video: {} });
   videoEl.srcObject = stream;
