@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lego Emotions</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        text-align: center;
+      }
+      #lego-face {
+        width: 100px;
+        height: 100px;
+        background: url(/assets/emotions.png) -400px 0;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lego Emotions</h1>
+    <p id="loading">loading...</p>
+    <img id="lego-face" src="/assets/img_trans.gif" alt="lego expression" />
+    <video
+      onloadedmetadata="onPlay(this)"
+      id="inputVideo"
+      autoplay
+      muted
+      playsinline
+      style="width: 100vw; visibility: hidden"
+    ></video>
+    <canvas id="overlay" />
+    <script src="assets/face-api.min.js"></script>
+    <script src="/script.js"></script>
+  </body>
+</html>
